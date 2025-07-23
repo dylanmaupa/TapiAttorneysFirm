@@ -10,6 +10,7 @@ import LawyerProfile from './pages/LawyerProfile';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <div className="min-h-screen bg-white text-gray-900 font-sans">
         <Header />
         <main>
+          <ScrollToTop/>
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
