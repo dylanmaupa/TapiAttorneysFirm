@@ -1,5 +1,6 @@
 import React from 'react';
 import { Scale, Home, Briefcase, Users, Shield, FileText, Building, Gavel, PenTool } from 'lucide-react';
+import ScrollAnimation from '../components/ScrollAnimation';
 
 const Services = () => {
   const services = [
@@ -109,11 +110,11 @@ const Services = () => {
       {/* Hero Section */}
       <section className="bg-gray-900 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl fade-in-up">
             <h1 className="text-4xl lg:text-5xl font-serif font-bold mb-6">
               Our Legal Services
             </h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
+            <p className="text-xl text-gray-200 leading-relaxed fade-in-up fade-in-delay-1">
               Comprehensive legal solutions across diverse practice areas, 
               delivered with expertise, integrity, and personalized attention.
             </p>
@@ -126,36 +127,38 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {services.map((service, index) => (
-              <div
+              <ScrollAnimation
                 key={index}
-                className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-200"
+                delay={index * 100}
               >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="text-blue-600 flex-shrink-0">{service.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {service.description}
-                    </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-200">
+                  <div className="flex items-start space-x-4 mb-6">
+                    <div className="text-blue-600 flex-shrink-0">{service.icon}</div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                
+                  <div className="border-t border-gray-100 pt-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">
+                      Key Services Include:
+                    </h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <span className="text-gray-600 text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-                
-                <div className="border-t border-gray-100 pt-6">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">
-                    Key Services Include:
-                  </h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-600 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              </ScrollAnimation>
             ))}
           </div>
         </div>

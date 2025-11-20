@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Award, Target, Users, ArrowRight } from 'lucide-react';
+import ScrollAnimation from '../components/ScrollAnimation';
 
 const About = () => {
   const values = [
@@ -71,11 +72,11 @@ const About = () => {
       {/* Hero Section */}
       <section className="bg-gray-900 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl fade-in-up">
             <h1 className="text-4xl lg:text-5xl font-serif font-bold mb-6">
               About Our Firm
             </h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
+            <p className="text-xl text-gray-200 leading-relaxed fade-in-up fade-in-delay-1">
               Chikwangwani Tapi Attorneys represents the confluence of experience, 
               expertise, and unwavering commitment to legal excellence.
             </p>
@@ -87,7 +88,7 @@ const About = () => {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <ScrollAnimation>
               <h2 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6">
                 Our Story
               </h2>
@@ -106,13 +107,13 @@ const About = () => {
                 it requires understanding our clients' objectives, anticipating challenges, 
                 and crafting strategic solutions that deliver meaningful results.
               </p>
-            </div>
-            <div className="bg-gray-100 rounded-lg h-96 flex items-center justify-center">
+            </ScrollAnimation>
+            <ScrollAnimation delay={300} className="bg-gray-100 rounded-lg h-96 flex items-center justify-center">
               <div className="text-center text-gray-500">
                 <Users className="h-16 w-16 mx-auto mb-4" />
                 <p className="text-lg">Our Legal Team</p>
               </div>
-            </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -120,19 +121,20 @@ const About = () => {
       {/* Our Values */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <ScrollAnimation className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-4">
               Our Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               The principles that guide our practice and define our commitment to clients.
             </p>
-          </div>
+          </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <div
+              <ScrollAnimation
                 key={index}
+                delay={index * 200}
                 className="text-center bg-white p-8 rounded-lg shadow-sm border border-gray-100"
               >
                 <div className="text-blue-600 mb-4 flex justify-center">{value.icon}</div>
@@ -142,7 +144,7 @@ const About = () => {
                 <p className="text-gray-600 leading-relaxed">
                   {value.description}
                 </p>
-              </div>
+              </ScrollAnimation>
             ))}
           </div>
         </div>

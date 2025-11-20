@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Scale, Users, FileText, MessageCircle } from 'lucide-react';
+import ScrollAnimation from '../components/ScrollAnimation';
 
 const Homepage = () => {
   const featuredServices = [
@@ -51,16 +52,16 @@ const Homepage = () => {
       <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl fade-in-up">
             <h1 className="text-4xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
               Excellence in
               <span className="text-blue-400"> Legal Practice</span>
             </h1>
-            <p className="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed">
+            <p className="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed fade-in-up fade-in-delay-1">
               Chikwangwani Tapi Attorneys provides comprehensive legal services 
               with unwavering commitment to client success and professional integrity.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 fade-in-up fade-in-delay-2">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
@@ -82,7 +83,7 @@ const Homepage = () => {
       {/* Services Preview */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <ScrollAnimation className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-4">
               Our Practice Areas
             </h2>
@@ -90,26 +91,28 @@ const Homepage = () => {
               We provide expert legal counsel across diverse practice areas, 
               ensuring comprehensive solutions for our clients.
             </p>
-          </div>
+          </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {featuredServices.map((service, index) => (
-              <div
+              <ScrollAnimation
                 key={index}
-                className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-200"
+                delay={index * 200}
               >
-                <div className="text-blue-600 mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-200">
+                  <div className="text-blue-600 mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </ScrollAnimation>
             ))}
           </div>
 
-          <div className="text-center">
+          <ScrollAnimation className="text-center">
             <Link
               to="/services"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
@@ -117,7 +120,7 @@ const Homepage = () => {
               View All Services
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
 
@@ -125,7 +128,7 @@ const Homepage = () => {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <ScrollAnimation>
               <h2 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6">
                 About Our Firm
               </h2>
@@ -146,13 +149,13 @@ const Homepage = () => {
                 Learn More About Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-            </div>
-            <div className="bg-gray-100 rounded-lg h-96 flex items-center justify-center">
+            </ScrollAnimation>
+            <ScrollAnimation delay={300} className="bg-gray-100 rounded-lg h-96 flex items-center justify-center">
               <div className="text-center text-gray-500">
                 <Scale className="h-16 w-16 mx-auto mb-4" />
                 <p className="text-lg">Professional Law Firm Image</p>
               </div>
-            </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -160,7 +163,7 @@ const Homepage = () => {
       {/* Blog Preview */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <ScrollAnimation className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-4">
               Legal Insights
             </h2>
@@ -168,40 +171,42 @@ const Homepage = () => {
               Stay informed with our latest legal commentary, case studies, 
               and insights from our experienced team.
             </p>
-          </div>
+          </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {blogPosts.map((post) => (
-              <article
+              <ScrollAnimation
                 key={post.id}
-                className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-200"
+                delay={post.id * 150}
               >
-                <div className="p-6">
-                  <div className="flex items-center text-sm text-blue-600 mb-2">
-                    <MessageCircle className="h-4 w-4 mr-1" />
-                    {post.category}
+                <article className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-200">
+                  <div className="p-6">
+                    <div className="flex items-center text-sm text-blue-600 mb-2">
+                      <MessageCircle className="h-4 w-4 mr-1" />
+                      {post.category}
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">{post.date}</span>
+                      <Link
+                        to={`/blog/${post.id}`}
+                        className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                      >
+                        Read More →
+                      </Link>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{post.date}</span>
-                    <Link
-                      to={`/blog/${post.id}`}
-                      className="text-blue-600 hover:text-blue-700 font-medium text-sm"
-                    >
-                      Read More →
-                    </Link>
-                  </div>
-                </div>
-              </article>
+                </article>
+              </ScrollAnimation>
             ))}
           </div>
 
-          <div className="text-center">
+          <ScrollAnimation className="text-center">
             <Link
               to="/blog"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
@@ -209,7 +214,7 @@ const Homepage = () => {
               View All Insights
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
     </div>
