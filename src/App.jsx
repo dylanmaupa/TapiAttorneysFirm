@@ -11,11 +11,12 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white text-gray-900 font-sans">
+      <div className="min-h-screen bg-cream-100 text-charcoal-900 font-sans">
         <Header />
         <main>
           <ScrollToTop/>
@@ -31,6 +32,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <WhatsAppButton />
       </div>
     </Router>
   );
