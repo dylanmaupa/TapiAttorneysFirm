@@ -474,11 +474,11 @@ const Homepage = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:+2634123456"
+                href="tel:+2638677211814"
                 className="inline-flex items-center space-x-2 text-cream-300/60 hover:text-gold-400 transition-colors text-sm font-medium"
               >
                 <Phone className="h-5 w-5" />
-                <span>Or call us: +263 4 123 4567</span>
+                <span>Or call us: +263 86 7721 1814</span>
               </a>
             </div>
           </ScrollAnimation>
