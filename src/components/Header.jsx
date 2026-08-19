@@ -20,23 +20,22 @@ const Header = () => {
   }, [location.pathname]);
 
   const navigation = [
-    { name: 'Home',     href: '/' },
-    { name: 'About',    href: '/about' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Team',     href: '/team' },
+    { name: 'Team', href: '/team' },
     { name: 'Insights', href: '/blog' },
-    { name: 'Contact',  href: '/contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const isActive = (path) => location.pathname === path;
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
           ? 'glass shadow-md border-b border-gold-200'
           : 'bg-cream-100/95 border-b border-cream-200'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -44,7 +43,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0 group" aria-label="Chikwangwani Tapi Attorneys - Home">
             <img
-              src="/cta-logo-white.png"
+              src="/cta-logo-white.webp"
               alt="Chikwangwani Tapi Attorneys"
               className="h-12 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
             />
@@ -56,11 +55,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
-                  isActive(item.href)
+                className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${isActive(item.href)
                     ? 'text-gold-600 bg-gold-50'
                     : 'text-charcoal-700 hover:text-navy-600 hover:bg-cream-200'
-                }`}
+                  }`}
               >
                 {item.name}
                 {isActive(item.href) && (
@@ -102,20 +100,18 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}
         >
           <div className="border-t border-cream-300 py-4 space-y-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`flex items-center px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
-                  isActive(item.href)
+                className={`flex items-center px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${isActive(item.href)
                     ? 'text-gold-600 bg-gold-50 border-l-2 border-gold-500'
                     : 'text-charcoal-700 hover:text-navy-600 hover:bg-cream-200'
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>

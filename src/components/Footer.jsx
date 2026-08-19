@@ -13,11 +13,11 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    { name: 'About Us',     href: '/about'    },
+    { name: 'About Us', href: '/about' },
     { name: 'Our Services', href: '/services' },
-    { name: 'Our Team',     href: '/team'     },
-    { name: 'Insights',     href: '/blog'     },
-    { name: 'Contact Us',   href: '/contact'  },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Insights', href: '/blog' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   return (
@@ -53,7 +53,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-5" aria-label="Chikwangwani Tapi Attorneys - Home">
               <img
-                src="/cta-logo-white.png"
+                src="/cta-logo-white.webp"
                 alt="Chikwangwani Tapi Attorneys"
                 className="h-14 w-auto object-contain"
               />
@@ -67,7 +67,7 @@ const Footer = () => {
               {[
                 { icon: Linkedin, label: 'LinkedIn', href: '#' },
                 { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/p/Chikwangwani-Tapi-Attorneys-100047311796267/' },
-                { icon: Twitter,  label: 'Twitter',  href: '#' },
+                { icon: Twitter, label: 'Twitter', href: '#' },
               ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
@@ -160,7 +160,7 @@ const Footer = () => {
                 <div className="space-y-2">
                   <div className="flex items-start space-x-3">
                     <MapPin className="h-4 w-4 text-gold-500 mt-0.5 flex-shrink-0" />
-                    <p className="text-cream-300/60 text-sm">10 Warwick Street <br/> Kadoma, Zimbabwe</p>
+                    <p className="text-cream-300/60 text-sm">10 Warwick Street <br /> Kadoma, Zimbabwe</p>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="h-4 w-4 text-gold-500 flex-shrink-0" />
