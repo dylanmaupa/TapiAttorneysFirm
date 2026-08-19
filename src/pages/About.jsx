@@ -23,12 +23,12 @@ const About = () => {
   ];
 
   const teamMembers = [
-    { name: 'D. Chikwangwani', position: 'Managing Partner',  specialization: 'Commercial Litigation, Corporate Law', id: 'chikwangwani' },
-    { name: 'G. Mabwe',        position: 'Partner',           specialization: 'Family Law, Property Law',             id: 'mabwe'        },
-    { name: 'NT. Mazungunye',  position: 'Associate',         specialization: 'Criminal Law, Constitutional Law',     id: 'mazungunye'   },
-    { name: 'MM. James',       position: 'Associate',         specialization: 'Labour Law, Employment Relations',     id: 'james'        },
-    { name: 'K. Masiyenyama',  position: 'Associate',         specialization: 'Property Law, Conveyancing',          id: 'masiyenyama'  },
-    { name: 'TL. Marezana',    position: 'Associate',         specialization: 'Estate Planning, Trusts',             id: 'marezana'     },
+    { name: 'D. Chikwangwani', position: 'Managing Partner', specialization: 'Commercial Litigation, Corporate Law', id: 'chikwangwani' },
+    { name: 'G. Mabwe', position: 'Partner', specialization: 'Family Law, Property Law', id: 'mabwe' },
+    { name: 'NT. Mazungunye', position: 'Associate', specialization: 'Criminal Law, Constitutional Law', id: 'mazungunye' },
+    { name: 'MM. James', position: 'Associate', specialization: 'Labour Law, Employment Relations', id: 'james' },
+    { name: 'K. Masiyenyama', position: 'Associate', specialization: 'Property Law, Conveyancing', id: 'masiyenyama' },
+    { name: 'TL. Marezana', position: 'Associate', specialization: 'Estate Planning, Trusts', id: 'marezana' },
   ];
 
   const milestones = [
@@ -103,7 +103,7 @@ const About = () => {
             <ScrollAnimation delay={300} className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-card-hover h-[500px]">
                 <img
-                  src="/office.png"
+                  src="/office.webp"
                   alt="Chikwangwani Tapi Attorneys Harare office"
                   className="w-full h-full object-cover"
                   onError={(e) => {

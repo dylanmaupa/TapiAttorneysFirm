@@ -137,8 +137,8 @@ const Homepage = () => {
   ];
 
   const categoryColors = {
-    'Labour Law':       'bg-blue-50 text-blue-700',
-    'Property Law':     'bg-emerald-50 text-emerald-700',
+    'Labour Law': 'bg-blue-50 text-blue-700',
+    'Property Law': 'bg-emerald-50 text-emerald-700',
     'Constitutional Law': 'bg-purple-50 text-purple-700',
   };
 
@@ -211,10 +211,10 @@ const Homepage = () => {
       <section ref={statsRef} className="bg-navy-600 border-y border-gold-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-gold-500/10">
-            <StatItem value={500}  suffix="+"  label="Cases Handled"         trigger={statsVisible} />
-            <StatItem value={7}    suffix=""   label="Expert Attorneys"       trigger={statsVisible} />
-            <StatItem value={15}   suffix="+"  label="Years Experience"       trigger={statsVisible} />
-            <StatItem value={9}    suffix=""   label="Practice Areas"         trigger={statsVisible} />
+            <StatItem value={500} suffix="+" label="Cases Handled" trigger={statsVisible} />
+            <StatItem value={7} suffix="" label="Expert Attorneys" trigger={statsVisible} />
+            <StatItem value={15} suffix="+" label="Years Experience" trigger={statsVisible} />
+            <StatItem value={9} suffix="" label="Practice Areas" trigger={statsVisible} />
           </div>
         </div>
       </section>
@@ -280,7 +280,7 @@ const Homepage = () => {
             <ScrollAnimation className="relative order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-card-hover h-[480px]">
                 <img
-                  src="/office.png"
+                  src="/office.webp"
                   alt="Chikwangwani Tapi Attorneys office interior"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -321,10 +321,10 @@ const Homepage = () => {
               {/* Values */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { title: 'Integrity',      desc: 'Honest and transparent in all we do'           },
-                  { title: 'Excellence',     desc: 'Highest professional standards at all times'   },
-                  { title: 'Client Focus',   desc: 'Your objectives are our primary concern'       },
-                  { title: 'Confidentiality', desc: 'Your matters handled with complete discretion'},
+                  { title: 'Integrity', desc: 'Honest and transparent in all we do' },
+                  { title: 'Excellence', desc: 'Highest professional standards at all times' },
+                  { title: 'Client Focus', desc: 'Your objectives are our primary concern' },
+                  { title: 'Confidentiality', desc: 'Your matters handled with complete discretion' },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex items-start space-x-3">
                     <div className="w-5 h-5 rounded-full bg-gold-500/15 flex items-center justify-center flex-shrink-0 mt-0.5">
