@@ -7,4 +7,20 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  build: {
+    chunkSizeWarningLimit: 900,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('three') || id.includes('@react-three')) {
+            return 'three-vendor';
+          }
+          if (id.includes('react-dom') || id.includes('react-router')) {
+            return 'react-vendor';
+          }
+        },
+      },
+    },
+  },
 });
+
