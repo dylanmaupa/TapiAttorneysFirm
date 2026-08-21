@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Scale, Users, Home, Briefcase, Shield, FileText, ChevronRight, Quote, Star, Phone } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
+import ScalesOf3D from '../components/ScalesOf3D';
 
 /* ─── Animated Counter Hook ─── */
 function useCountUp(target, duration = 2000, startTrigger = false) {
@@ -148,61 +149,69 @@ const Homepage = () => {
       {/* ═══════════════════════════════════════════════
           HERO SECTION
           ═══════════════════════════════════════════════ */}
-      <section className="relative min-h-screen bg-charcoal-900 hero-mesh flex items-center overflow-hidden">
-        {/* Decorative gold orbs */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-navy-600/20 rounded-full blur-3xl pointer-events-none" />
+      {/* ── section: no overflow-hidden so scroll indicator isn't clipped ── */}
+      <section className="relative min-h-screen bg-charcoal-900 hero-mesh flex items-center">
+        {/* Decorative orbs — own overflow-hidden wrapper so they stay contained */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-navy-600/20 rounded-full blur-3xl" />
+        </div>
 
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="max-w-3xl">
-            <p className="section-label fade-in mb-5">
-              Zimbabwe's Premier Boutique Law Firm
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-            <span className="gold-line block mb-8" />
+            {/* ── Left: Text ── */}
+            <div>
+              <p className="section-label fade-in mb-4">
+                Zimbabwe's Premier Boutique Law Firm
+              </p>
 
-            <h1 className="font-serif font-bold text-white leading-[1.1] mb-6 fade-in-up">
-              <span className="text-5xl lg:text-7xl block">Excellence in</span>
-              <span className="text-5xl lg:text-7xl block text-gold-400">Legal Practice.</span>
-            </h1>
+              <span className="gold-line block mb-6" />
 
-            <p className="text-lg lg:text-xl text-cream-300/70 leading-relaxed mb-10 max-w-2xl fade-in-up fade-in-delay-1">
-              Chikwangwani Tapi Attorneys provides comprehensive legal services across Zimbabwe
-              with unwavering commitment to client success, integrity, and measurable results.
-            </p>
+              <h1 className="font-serif font-bold text-white leading-[1.1] mb-5 fade-in-up">
+                <span className="text-4xl lg:text-6xl block">Excellence in</span>
+                <span className="text-4xl lg:text-6xl block text-gold-400">Legal Practice.</span>
+              </h1>
 
-            <div className="flex flex-col sm:flex-row gap-4 fade-in-up fade-in-delay-2">
-              <Link
-                to="/contact"
-                className="btn-gold inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold"
-              >
-                Schedule Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="btn-ghost-gold inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold"
-              >
-                Explore Our Services
-              </Link>
+              <p className="text-base lg:text-lg text-cream-300/70 leading-relaxed mb-8 fade-in-up fade-in-delay-1">
+                Comprehensive legal services across Zimbabwe — delivered with integrity,
+                professionalism, and measurable results.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 fade-in-up fade-in-delay-2">
+                <Link
+                  to="/contact"
+                  className="btn-gold inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-semibold"
+                >
+                  Free Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link
+                  to="/services"
+                  className="btn-ghost-gold inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-semibold"
+                >
+                  Our Services
+                </Link>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-5 mt-8 fade-in-up fade-in-delay-3">
+                {['Bar Certified', 'Confidential', 'Emergency Ready'].map((badge) => (
+                  <div key={badge} className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-gold-500" />
+                    <span className="text-cream-300/50 text-xs">{badge}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-6 mt-12 fade-in-up fade-in-delay-3">
-              {['Zimbabwe Bar Certified', 'Confidential & Trusted', 'Emergency Consultations'].map((badge) => (
-                <div key={badge} className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-gold-500" />
-                  <span className="text-cream-300/50 text-sm">{badge}</span>
-                </div>
-              ))}
+            {/* ── Right: 3D Scales ── */}
+            <div className="hidden lg:flex items-center justify-center fade-in fade-in-delay-2 w-full">
+              <ScalesOf3D />
             </div>
+
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 fade-in fade-in-delay-4 flex flex-col items-center space-y-1">
-          <span className="text-cream-300/30 text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-gold-500/50 to-transparent" />
-        </div>
       </section>
 
       {/* ═══════════════════════════════════════════════

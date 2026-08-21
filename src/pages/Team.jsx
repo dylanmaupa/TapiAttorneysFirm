@@ -1,98 +1,109 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, ArrowRight, Clock } from 'lucide-react';
+import { Mail, Phone, ArrowRight, Clock, UserCheck } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const Team = () => {
-  const teamMembers = [
+  const lawyers = [
     {
-      name: 'D. Chikwangwani',
+      name: 'Douglas Chikwangwani',
       position: 'Managing Partner',
-      specialization: 'Commercial Litigation, Corporate Law',
+      specialization: 'Corporate & Commercial Law | Litigation | Dispute Resolution',
       experience: '15+ Years',
-      education: 'LLB (Hons), University of Zimbabwe',
       email: 'dchikwangwani@ctattorneys.co.zw',
       phone: '+263 77 290 9772',
       id: 'chikwangwani',
-      bio: 'Leading the firm with extensive experience in commercial litigation and corporate advisory services across Zimbabwe and the region.',
+      bio: 'Douglas leads the firm with a practice built around litigation, corporate advisory and strategic legal problem-solving, advising businesses, institutions and individuals across Zimbabwe.',
       initials: 'DC',
     },
     {
-      name: 'G. Mabwe',
+      name: 'Golden Mabwe',
       position: 'Partner',
-      specialization: 'Legal Practitioner, Conveyancer Noatry Public',
+      specialization: 'Conveyancing | Property Law | Deceased Estates | Corporate Governance',
       experience: '12+ Years',
-      education: 'LLB, University of Zimbabwe',
       email: 'gmabwe@ctattorneys.co.zw',
       phone: '+263 77 396 9136',
       id: 'mabwe',
-      bio: 'Specialized in family law matters with a compassionate, strategic approach to sensitive family disputes and property settlements.',
+      bio: "Golden leads the firm's Property and Estates Department, advising on property transactions, conveyancing, real estate development and estate administration.",
       initials: 'GM',
     },
     {
       name: 'NT. Mazungunye',
       position: 'Associate',
-      specialization: 'Criminal Law, Constitutional Law',
+      specialization: 'Criminal Law | Constitutional Law',
       experience: '8+ Years',
-      education: 'LLB, University of Zimbabwe',
       email: 'nt.mazungunye@ctattorneys.co.zw',
       phone: '+263 77 345 6789',
       id: 'mazungunye',
-      bio: 'Experienced criminal defense attorney with strong expertise in constitutional law and public interest litigation matters.',
+      bio: 'Experienced in criminal litigation and constitutional law matters, representing clients with a focus on procedural and constitutional protections.',
       initials: 'NM',
     },
     {
-      name: 'M. James',
+      name: 'Makanaka James',
       position: 'Associate',
-      specialization: 'Labour Law, Employment Relations',
+      specialization: 'Criminal Defence | Bail Applications | Constitutional Rights',
       experience: '6+ Years',
-      education: 'LLB, Midlands State University',
       email: 'mjames@ctattorneys.co.zw',
       phone: '+263 78 246 9146',
       id: 'james',
-      bio: 'Dedicated to protecting employee rights and ensuring fair employment practices in both Labour Court and NEC proceedings.',
+      bio: 'Makanaka represents clients in criminal trials, bail applications and appellate matters, grounding her practice in the principle that every person is entitled to a fair hearing.',
       initials: 'MJ',
     },
     {
-      name: 'K. Masiyenyama',
+      name: 'Kudakwashe Masiyenyama',
       position: 'Associate',
-      specialization: 'Property Law, Conveyancing',
+      specialization: 'Labour & Employment Law | Criminal Law | Dispute Resolution',
       experience: '7+ Years',
-      education: 'LLB, University of Zimbabwe',
       email: 'kudam@ctattorneys.co.zw',
       phone: '+263 77 682 8788',
       id: 'masiyenyama',
-      bio: 'Expert in property transactions and conveyancing with meticulous attention to detail in every transfer and registration.',
+      bio: 'Kudakwashe practises in labour and employment law and criminal law, approaching disputes with a focus on practical resolution and firm advocacy where proceedings are necessary.',
       initials: 'KM',
     },
     {
-      name: 'TL. Marezana',
+      name: 'Tashinga Lawrence Marezana',
       position: 'Associate',
-      specialization: 'Estate Planning, Trusts',
+      specialization: 'Civil & Commercial Litigation | Contractual Disputes | Debt Recovery',
       experience: '5+ Years',
-      education: 'LLB, University of Zimbabwe',
       email: 'tlmarezana@ctattorneys.co.zw',
       phone: '+263 77 588 6434',
       id: 'marezana',
-      bio: 'Specialized in estate planning and trust administration, helping clients protect their legacy and provide for their beneficiaries.',
+      bio: 'Tashinga represents individuals and businesses in civil and commercial litigation, combining careful legal analysis with practical strategy directed towards effective resolution.',
       initials: 'TM',
     },
     {
-      name: 'M. Phiri',
+      name: 'Y.M. Phiri',
       position: 'Associate',
-      specialization: 'Legal Practitioner',
+      specialization: 'Family Law | Deceased Estates | Civil Litigation',
       experience: '4+ Years',
-      education: 'LLB, University of Zimbabwe',
       email: 'maxinephiri@ctattorneys.co.zw',
       phone: '+263 77 374 4728',
       id: 'phiri',
-      bio: 'Providing strategic corporate and commercial legal advice to businesses, from startups to established enterprises.',
-      initials: 'MP',
+      bio: 'Y.M. Phiri advises and represents clients in family law, deceased estates and civil litigation, combining firm representation with a measured approach to sensitive matters.',
+      initials: 'YP',
+    },
+  ];
+
+  const supportStaff = [
+    {
+      name: 'Ruth Manionesa',
+      position: 'Legal Support Officer',
+      focus: 'Legal Research | Documentation | Litigation Support | Client Liaison',
+      bio: 'Contributing to the firm\'s legal work through research, document preparation and case support. Currently completing her BLP while gaining practical experience within the firm.',
+      initials: 'RM',
+    },
+    {
+      name: 'Chenai',
+      position: 'Legal Support Officer',
+      focus: 'Legal Research | Documentation | Litigation Support | Client Liaison',
+      bio: 'Supporting practitioners across legal research, documentation and client matter management. Currently undertaking Bar Conversion Examinations as she progresses towards qualification.',
+      initials: 'C',
     },
   ];
 
   return (
     <div className="bg-cream-100">
+
       {/* Hero */}
       <section className="relative bg-charcoal-900 hero-mesh py-20 lg:py-28 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -111,11 +122,16 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Team Grid */}
+      {/* ── Lawyers Grid ── */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollAnimation className="mb-12">
+            <p className="section-label mb-2">Our Lawyers</p>
+            <h2 className="section-title text-3xl text-navy-600">Legal Practitioners</h2>
+          </ScrollAnimation>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
+            {lawyers.map((member, index) => (
               <ScrollAnimation key={index} delay={index * 80}>
                 <Link
                   to={`/team/${member.id}`}
@@ -128,10 +144,8 @@ const Team = () => {
                         {member.initials}
                       </span>
                     </div>
-                    {/* Decorative corners */}
                     <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-gold-500/30" />
                     <div className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-gold-500/30" />
-                    {/* Hover overlay hint */}
                     <div className="absolute inset-0 bg-gold-500/0 group-hover:bg-gold-500/5 transition-colors duration-300 flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100">
                       <span className="text-xs text-gold-300 font-medium tracking-widest uppercase">View Profile →</span>
                     </div>
@@ -144,14 +158,13 @@ const Team = () => {
                         {member.name}
                       </h3>
                       <p className="text-gold-600 font-semibold text-sm mb-1">{member.position}</p>
-                      <p className="text-charcoal-600/50 text-xs">{member.specialization}</p>
+                      <p className="text-charcoal-600/50 text-xs leading-relaxed">{member.specialization}</p>
                     </div>
 
                     <p className="text-charcoal-600/60 text-sm leading-relaxed mb-5 flex-grow">
                       {member.bio}
                     </p>
 
-                    {/* Meta */}
                     <div className="space-y-2 mb-5 text-xs text-charcoal-600/50">
                       <div className="flex items-center space-x-2">
                         <Clock className="h-3.5 w-3.5 text-gold-500" />
@@ -159,7 +172,6 @@ const Team = () => {
                       </div>
                     </div>
 
-                    {/* Contact — stopPropagation so clicks don't bubble to the card Link */}
                     <div className="border-t border-cream-200 pt-4 space-y-2 mb-5">
                       <a
                         href={`mailto:${member.email}`}
@@ -191,6 +203,41 @@ const Team = () => {
         </div>
       </section>
 
+      {/* ── Professional Support Team ── */}
+      <section className="py-16 bg-navy-600/5 border-t border-cream-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollAnimation className="mb-10">
+            <p className="section-label mb-2">Support</p>
+            <h2 className="section-title text-3xl text-navy-600">Our Professional Team</h2>
+            <p className="text-charcoal-600/60 text-sm mt-3 max-w-xl">
+              Our legal support officers work alongside our practitioners to ensure every client
+              matter receives careful attention and thorough preparation.
+            </p>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+            {supportStaff.map((member, index) => (
+              <ScrollAnimation key={index} delay={index * 100}>
+                <div className="service-card bg-white p-6 flex items-start space-x-5">
+                  <div className="w-14 h-14 rounded-full bg-navy-600 flex items-center justify-center flex-shrink-0 border border-gold-500/20">
+                    <span className="font-serif font-bold text-lg text-gold-400">{member.initials}</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-navy-600 text-base mb-1">{member.name}</h3>
+                    <div className="flex items-center space-x-1.5 mb-3">
+                      <UserCheck className="h-3.5 w-3.5 text-gold-500" />
+                      <p className="text-gold-600 text-xs font-semibold">{member.position}</p>
+                    </div>
+                    <p className="text-charcoal-600/60 text-sm leading-relaxed mb-3">{member.bio}</p>
+                    <p className="text-charcoal-600/40 text-xs">{member.focus}</p>
+                  </div>
+                </div>
+              </ScrollAnimation>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-navy-gradient">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -213,6 +260,7 @@ const Team = () => {
           </ScrollAnimation>
         </div>
       </section>
+
     </div>
   );
 };
