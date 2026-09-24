@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Scale, Home, Briefcase, Users, Shield, FileText, Building, Gavel, PenTool, ArrowRight, CheckCircle2 } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
@@ -116,7 +117,13 @@ const Services = () => {
   ];
 
   return (
-    <div className="bg-cream-100">
+    <>
+      <Helmet>
+        <title>Legal Services | Litigation, Corporate, Conveyancing & More | CT Attorneys Zimbabwe</title>
+        <meta name="description" content="Comprehensive legal services from Chikwangwani Tapi Attorneys: civil & commercial litigation, corporate law, conveyancing, family law, criminal defence, labour law, deceased estates, and notarial services in Zimbabwe." />
+        <link rel="canonical" href="https://ctattorneys.co.zw/services" />
+      </Helmet>
+      <div className="bg-cream-100">
       {/* Hero */}
       <section className="relative bg-charcoal-900 hero-mesh py-20 lg:py-28 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -208,6 +215,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

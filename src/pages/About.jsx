@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Award, Target, Users, ArrowRight, CheckCircle2 } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
@@ -40,7 +41,13 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-cream-100">
+    <>
+      <Helmet>
+        <title>About Us | Chikwangwani Tapi Attorneys | Zimbabwe Law Firm</title>
+        <meta name="description" content="Learn about Chikwangwani Tapi Attorneys — a leading boutique law firm in Zimbabwe. Our mission, values and commitment to delivering exceptional legal services across Harare and Kadoma." />
+        <link rel="canonical" href="https://ctattorneys.co.zw/about" />
+      </Helmet>
+      <div className="bg-cream-100">
 
       {/* Hero */}
       <section className="relative bg-charcoal-900 hero-mesh py-20 lg:py-28 overflow-hidden">
@@ -213,6 +220,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

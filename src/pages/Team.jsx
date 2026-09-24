@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, ArrowRight, Clock, UserCheck } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
@@ -102,7 +103,13 @@ const Team = () => {
   ];
 
   return (
-    <div className="bg-cream-100">
+    <>
+      <Helmet>
+        <title>Our Lawyers | Chikwangwani Tapi Attorneys | Zimbabwe Legal Team</title>
+        <meta name="description" content="Meet the experienced legal team at Chikwangwani Tapi Attorneys — Douglas Chikwangwani, Golden Mabwe, Makanaka James and more. Expert lawyers serving clients across Zimbabwe from Harare and Kadoma." />
+        <link rel="canonical" href="https://ctattorneys.co.zw/team" />
+      </Helmet>
+      <div className="bg-cream-100">
 
       {/* Hero */}
       <section className="relative bg-charcoal-900 hero-mesh py-20 lg:py-28 overflow-hidden">
@@ -262,6 +269,7 @@ const Team = () => {
       </section>
 
     </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
@@ -81,7 +82,13 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-cream-100">
+    <>
+      <Helmet>
+        <title>Contact Us | Free Legal Consultation | Chikwangwani Tapi Attorneys Zimbabwe</title>
+        <meta name="description" content="Contact Chikwangwani Tapi Attorneys for a free consultation. Offices in Harare (Eastgate Centre) and Kadoma. Call +263 8677211814 or fill in our online form. We respond within 24 hours." />
+        <link rel="canonical" href="https://ctattorneys.co.zw/contact" />
+      </Helmet>
+      <div className="bg-cream-100">
       {/* Hero */}
       <section className="relative bg-charcoal-900 hero-mesh py-20 lg:py-28 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -391,6 +398,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

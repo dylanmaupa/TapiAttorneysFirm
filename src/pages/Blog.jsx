@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Search, ChevronRight, Clock, Calendar, Tag } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
@@ -35,7 +36,13 @@ const Blog = () => {
   });
 
   return (
-    <div className="bg-cream-100">
+    <>
+      <Helmet>
+        <title>Legal Insights & Articles | Chikwangwani Tapi Attorneys Zimbabwe</title>
+        <meta name="description" content="Legal insights, articles and news from Chikwangwani Tapi Attorneys. Stay informed on Zimbabwe's evolving legal landscape — covering corporate law, conveyancing, labour law, family law and more." />
+        <link rel="canonical" href="https://ctattorneys.co.zw/insights" />
+      </Helmet>
+      <div className="bg-cream-100">
       {/* Hero */}
       <section className="relative bg-charcoal-900 hero-mesh py-20 lg:py-28 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -157,6 +164,7 @@ const Blog = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
