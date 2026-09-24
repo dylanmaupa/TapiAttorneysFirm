@@ -25,7 +25,7 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
     try {
-      const response = await fetch('https://formsubmit.co/ajax/dylanmaupa@gmail.com', {
+      const response = await fetch('/contact.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,8 +39,6 @@ const Contact = () => {
           practiceArea: formData.practiceArea || 'Not specified',
           subject: formData.subject,
           message: formData.message,
-          _subject: `[CT Attorneys] New Inquiry: ${formData.subject}`,
-          _template: 'table',
         }),
       });
       const result = await response.json();
