@@ -33,7 +33,7 @@ const LawyerProfile = () => {
     mabwe: {
       name: 'Golden Mabwe',
       initials: 'GM',
-      position: 'Partner',
+      // position: 'Partner',
       specialization: 'Conveyancing | Property Law | Deceased Estates | Corporate Governance',
       experience: '12+ Years',
       email: 'gmabwe@ctattorneys.co.zw',
@@ -58,7 +58,7 @@ const LawyerProfile = () => {
     james: {
       name: 'Makanaka James',
       initials: 'MJ',
-      position: 'Associate',
+      // position: 'Associate',
       specialization: 'Criminal Defence | Bail Applications | Constitutional Rights',
       experience: '6+ Years',
       email: 'mjames@ctattorneys.co.zw',
@@ -82,7 +82,7 @@ const LawyerProfile = () => {
     masiyenyama: {
       name: 'Kudakwashe Masiyenyama',
       initials: 'KM',
-      position: 'Associate',
+      // position: 'Associate',
       specialization: 'Labour & Employment Law | Criminal Law | Dispute Resolution',
       experience: '7+ Years',
       email: 'kudam@ctattorneys.co.zw',
@@ -108,7 +108,7 @@ const LawyerProfile = () => {
     marezana: {
       name: 'Tashinga Lawrence Marezana',
       initials: 'TM',
-      position: 'Associate',
+      // position: 'Associate',
       specialization: 'Civil & Commercial Litigation | Contractual Disputes | Debt Recovery',
       experience: '5+ Years',
       email: 'tlmarezana@ctattorneys.co.zw',
@@ -130,14 +130,14 @@ const LawyerProfile = () => {
       ],
     },
     phiri: {
-      name: 'Y.M. Phiri',
-      initials: 'YP',
-      position: 'Associate',
+      name: 'Maxine Phiri',
+      initials: 'MP',
+      // position: 'Associate',
       specialization: 'Family Law | Deceased Estates | Civil Litigation',
       experience: '4+ Years',
       email: 'maxinephiri@ctattorneys.co.zw',
       phone: '+263 77 374 4728',
-      bio: "Y.M. Phiri's practice centres on family law, deceased estates and civil litigation, areas in which legal disputes are often closely connected to difficult personal and family circumstances.\n\nShe advises and represents clients in divorce, custody, guardianship and inheritance matters, including disputes requiring negotiated resolution or contested court proceedings.\n\nHer family law practice recognises that the consequences of a dispute can extend well beyond the courtroom. She therefore combines firm representation with a measured approach to matters involving children, matrimonial interests and family relationships.\n\nIn deceased estates and succession matters, she assists clients in navigating inheritance disputes and estate-related legal issues, with particular attention to protecting the rights and interests of those affected.\n\nHer approach combines careful client engagement with firm and effective advocacy, particularly in matters requiring both legal precision and sensitivity.",
+      bio: "Maxine Phiri's practice centres on family law, deceased estates and civil litigation, areas in which legal disputes are often closely connected to difficult personal and family circumstances.\n\nShe advises and represents clients in divorce, custody, guardianship and inheritance matters, including disputes requiring negotiated resolution or contested court proceedings.\n\nHer family law practice recognises that the consequences of a dispute can extend well beyond the courtroom. She therefore combines firm representation with a measured approach to matters involving children, matrimonial interests and family relationships.\n\nIn deceased estates and succession matters, she assists clients in navigating inheritance disputes and estate-related legal issues, with particular attention to protecting the rights and interests of those affected.\n\nHer approach combines careful client engagement with firm and effective advocacy, particularly in matters requiring both legal precision and sensitivity.",
       expertise: [
         'Family Law',
         'Divorce & Matrimonial Matters',

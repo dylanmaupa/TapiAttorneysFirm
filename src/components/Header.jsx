@@ -38,14 +38,14 @@ const Header = () => {
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
 
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0 group" aria-label="Chikwangwani Tapi Attorneys - Home">
             <img
               src="/cta-logo-white.webp"
               alt="Chikwangwani Tapi Attorneys"
-              className="h-12 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
+              className="h-20 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
             />
           </Link>
 
@@ -81,7 +81,7 @@ const Header = () => {
               to="/contact"
               className="btn-gold inline-flex items-center px-5 py-2.5 rounded-lg text-sm font-semibold"
             >
-              Free Consultation
+              Schedule Consultation
             </Link>
           </div>
 
@@ -121,7 +121,7 @@ const Header = () => {
                 to="/contact"
                 className="btn-gold w-full flex items-center justify-center px-5 py-3 rounded-lg text-sm font-semibold"
               >
-                Free Consultation
+                Schedule Consultation
               </Link>
             </div>
           </div>

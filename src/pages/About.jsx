@@ -25,32 +25,31 @@ const About = () => {
 
   const teamMembers = [
     { name: 'D. Chikwangwani', position: 'Managing Partner', specialization: 'Commercial Litigation, Corporate Law', id: 'chikwangwani' },
-    { name: 'G. Mabwe', position: 'Partner', specialization: 'Family Law, Property Law', id: 'mabwe' },
-    { name: 'NT. Mazungunye', position: 'Associate', specialization: 'Criminal Law, Constitutional Law', id: 'mazungunye' },
-    { name: 'MM. James', position: 'Associate', specialization: 'Labour Law, Employment Relations', id: 'james' },
-    { name: 'K. Masiyenyama', position: 'Associate', specialization: 'Property Law, Conveyancing', id: 'masiyenyama' },
-    { name: 'TL. Marezana', position: 'Associate', specialization: 'Estate Planning, Trusts', id: 'marezana' },
+    { name: 'G. Mabwe', position: '', specialization: 'Family Law, Property Law', id: 'mabwe' },
+    { name: 'MM. James', position: '', specialization: 'Labour Law, Employment Relations', id: 'james' },
+    { name: 'K. Masiyenyama', position: '', specialization: 'Property Law, Conveyancing', id: 'masiyenyama' },
+    { name: 'TL. Marezana', position: '', specialization: 'Estate Planning, Trusts', id: 'marezana' },
   ];
 
   const milestones = [
-    { year: '2009', event: 'Firm founded in Harare by D. Chikwangwani' },
-    { year: '2013', event: 'Expanded to include property & conveyancing practice' },
-    { year: '2017', event: 'Grew to 5 attorneys, added constitutional law practice' },
-    { year: '2022', event: 'Recognized among Zimbabwe\'s leading boutique firms' },
-    { year: '2025', event: '7 attorneys, 9 practice areas, 500+ cases handled' },
+    { year: '2017', event: 'Firm founded in Harare by D. Chikwangwani' },
+    { year: '2019', event: 'Expanded to include property & conveyancing practice' },
+    { year: '2021', event: 'Grew to 5 attorneys, added constitutional law practice' },
+    { year: '2023', event: 'Recognized among Zimbabwe\'s leading law firms' },
+    { year: '2025', event: '7 attorneys, 9 practice areas, 1000+ cases handled' },
   ];
 
   return (
     <>
       <Helmet>
         <title>About Us | Chikwangwani Tapi Attorneys | Zimbabwe Law Firm</title>
-        <meta name="description" content="Learn about Chikwangwani Tapi Attorneys — a leading boutique law firm in Zimbabwe. Our mission, values and commitment to delivering exceptional legal services across Harare and Kadoma." />
+        <meta name="description" content="Learn about Chikwangwani Tapi Attorneys — a leading law firm in Zimbabwe. Our mission, values and commitment to delivering exceptional legal services across Harare and Kadoma." />
         <link rel="canonical" href="https://ctattorneys.co.zw/about" />
       </Helmet>
       <div className="bg-cream-100">
 
       {/* Hero */}
-      <section className="relative bg-charcoal-900 hero-mesh py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-charcoal-900 hero-mesh py-14 lg:py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl fade-in-up">
@@ -79,7 +78,7 @@ const About = () => {
               </h2>
               <p className="text-charcoal-600/70 leading-relaxed mb-5">
                 Founded on the principles of integrity, excellence, and client-centered service,
-                Chikwangwani Tapi Attorneys has grown to become a respected boutique law firm
+                Chikwangwani Tapi Attorneys has grown to become a respected law firm
                 serving clients across diverse legal needs throughout Zimbabwe.
               </p>
               <p className="text-charcoal-600/70 leading-relaxed mb-5">
@@ -204,7 +203,9 @@ const About = () => {
                   <h3 className="font-serif font-bold text-navy-600 mb-1 group-hover:text-gold-600 transition-colors">
                     {member.name}
                   </h3>
-                  <p className="text-gold-600 text-sm font-medium mb-1">{member.position}</p>
+                  {member.position && (
+                    <p className="text-gold-600 text-sm font-medium mb-1">{member.position}</p>
+                  )}
                   <p className="text-charcoal-600/50 text-xs">{member.specialization}</p>
                 </Link>
               </ScrollAnimation>

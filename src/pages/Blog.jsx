@@ -13,9 +13,9 @@ const Blog = () => {
   const posts = [
     { id: 1, title: 'Understanding Your Rights in Employment Disputes', excerpt: 'Recent developments in labour law and what employees need to know about their rights when facing workplace disputes in Zimbabwe.', date: 'March 15, 2025', category: 'Labour Law', readTime: '5 min read', author: 'MM. James' },
     { id: 2, title: 'Property Transfer Procedures in Zimbabwe', excerpt: 'A comprehensive guide to property conveyancing and registration processes under Zimbabwean law — from offer to title deed.', date: 'March 10, 2025', category: 'Property Law', readTime: '7 min read', author: 'K. Masiyenyama' },
-    { id: 3, title: 'Constitutional Rights and Public Interest Litigation', excerpt: 'Exploring the role of constitutional law in protecting citizens\' fundamental rights and the evolving landscape of public interest litigation.', date: 'March 5, 2025', category: 'Constitutional Law', readTime: '6 min read', author: 'NT. Mazungunye' },
+    { id: 3, title: 'Constitutional Rights and Public Interest Litigation', excerpt: 'Exploring the role of constitutional law in protecting citizens\' fundamental rights and the evolving landscape of public interest litigation.', date: 'March 5, 2025', category: 'Constitutional Law', readTime: '6 min read', author: 'M. James' },
     { id: 4, title: 'Navigating Divorce Proceedings in Zimbabwe', excerpt: 'A guide through the divorce process under Zimbabwean law, including property division, custody arrangements, and maintenance orders.', date: 'February 28, 2025', category: 'Family Law', readTime: '8 min read', author: 'G. Mabwe' },
-    { id: 5, title: 'Criminal Defense: Know Your Rights During Arrest', excerpt: 'What you need to know about your legal rights the moment you are arrested — and why securing legal representation immediately matters.', date: 'February 20, 2025', category: 'Criminal Law', readTime: '4 min read', author: 'NT. Mazungunye' },
+    { id: 5, title: 'Criminal Defense: Know Your Rights During Arrest', excerpt: 'What you need to know about your legal rights the moment you are arrested — and why securing legal representation immediately matters.', date: 'February 20, 2025', category: 'Criminal Law', readTime: '4 min read', author: 'K. Masiyenyama' },
     { id: 6, title: 'Starting a Business in Zimbabwe: Legal Essentials', excerpt: 'Key legal considerations for entrepreneurs — from company registration to shareholder agreements and regulatory compliance requirements.', date: 'February 12, 2025', category: 'Corporate Law', readTime: '9 min read', author: 'YM. Phiri' },
   ];
 
@@ -44,7 +44,7 @@ const Blog = () => {
       </Helmet>
       <div className="bg-cream-100">
       {/* Hero */}
-      <section className="relative bg-charcoal-900 hero-mesh py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-charcoal-900 hero-mesh py-14 lg:py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl fade-in-up">

@@ -85,12 +85,12 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact Us | Free Legal Consultation | Chikwangwani Tapi Attorneys Zimbabwe</title>
-        <meta name="description" content="Contact Chikwangwani Tapi Attorneys for a free consultation. Offices in Harare (Eastgate Centre) and Kadoma. Call +263 8677211814 or fill in our online form. We respond within 24 hours." />
+        <meta name="description" content="Contact Chikwangwani Tapi Attorneys for a Schedule Consultation. Offices in Harare (Eastgate Centre) and Kadoma. Call +263 8677211814 or fill in our online form. We respond within 24 hours." />
         <link rel="canonical" href="https://ctattorneys.co.zw/contact" />
       </Helmet>
       <div className="bg-cream-100">
       {/* Hero */}
-      <section className="relative bg-charcoal-900 hero-mesh py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-charcoal-900 hero-mesh py-14 lg:py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl fade-in-up">
@@ -108,7 +108,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Info + Form */}
-      <section className="py-20 lg:py-28">
+      <section className="py-14 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
@@ -207,7 +207,7 @@ const Contact = () => {
             {/* Right: Consultation Form */}
             <ScrollAnimation delay={200} className="lg:col-span-2">
               <div className="bg-white rounded-2xl shadow-card border border-cream-200 p-8 lg:p-10">
-                <p className="section-label mb-2">Free Consultation</p>
+                <p className="section-label mb-2">Schedule Consultation</p>
                 <h2 className="section-title text-2xl text-navy-600 mb-2">Schedule a Consultation</h2>
                 <p className="text-charcoal-600/50 text-sm mb-8">
                   Fill in the form below and we'll get back to you within 24 hours.
@@ -268,7 +268,7 @@ const Contact = () => {
                       <input
                         type="tel" id="phone" name="phone"
                         value={formData.phone} onChange={handleInputChange}
-                        className="form-input" placeholder="+263 77 123 4567"
+                        className="form-input" placeholder="+263 77 396 9136"
                       />
                     </div>
                     <div>
@@ -403,3 +403,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

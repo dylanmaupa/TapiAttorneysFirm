@@ -38,7 +38,7 @@ const Footer = () => {
               to="/contact"
               className="btn-gold flex-shrink-0 inline-flex items-center px-6 py-3 rounded-lg font-semibold text-sm whitespace-nowrap"
             >
-              Schedule Free Consultation
+              Schedule Consultation
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
@@ -59,7 +59,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-cream-300/60 text-sm leading-relaxed mb-6">
-              A boutique law firm committed to exceptional legal services with integrity,
+              A law firm committed to exceptional legal services with integrity,
               professionalism, and personalized attention to every client.
             </p>
             {/* Social Links */}

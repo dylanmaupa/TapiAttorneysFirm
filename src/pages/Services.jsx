@@ -125,7 +125,7 @@ const Services = () => {
       </Helmet>
       <div className="bg-cream-100">
       {/* Hero */}
-      <section className="relative bg-charcoal-900 hero-mesh py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-charcoal-900 hero-mesh py-14 lg:py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl fade-in-up">
@@ -143,7 +143,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 lg:py-28">
+      <section className="py-14 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
@@ -194,7 +194,7 @@ const Services = () => {
             </h2>
             <p className="text-cream-300/60 text-lg mb-10 max-w-2xl mx-auto">
               Our experienced team is ready to provide the legal guidance and representation
-              you need. Contact us today for a free initial consultation.
+              Contact us today to schedule a consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -205,10 +205,10 @@ const Services = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:+2634123456"
+                href="tel:+2638677211814"
                 className="btn-ghost-gold inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold"
               >
-                Call: +263 4 123 4567
+                Call: +263 8677211814
               </a>
             </div>
           </ScrollAnimation>

@@ -148,7 +148,7 @@ const Homepage = () => {
     <>
       <Helmet>
         <title>Chikwangwani Tapi Attorneys | Lawyers in Zimbabwe | Harare Law Firm</title>
-        <meta name="description" content="Zimbabwe's premier boutique law firm. Expert lawyers in Harare & Kadoma — litigation, corporate law, conveyancing, family law, criminal defence, and labour law. Book a free consultation today." />
+        <meta name="description" content="Chikwangwani Tapi Attorneys — Zimbabwe's leading law firm. Expert lawyers in Harare & Kadoma delivering bold, practical, effective legal solutions. Schedule a consultation today." />
         <link rel="canonical" href="https://ctattorneys.co.zw/" />
       </Helmet>
       <div className="bg-cream-100">
@@ -164,13 +164,13 @@ const Homepage = () => {
           <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-navy-600/20 rounded-full blur-3xl" />
         </div>
 
-        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             {/* ── Left: Text ── */}
             <div>
               <p className="section-label fade-in mb-4">
-                Zimbabwe's Premier Boutique Law Firm
+                Zimbabwe's Premier Law Firm
               </p>
 
               <span className="gold-line block mb-6" />
@@ -180,9 +180,10 @@ const Homepage = () => {
                 <span className="text-4xl lg:text-6xl block text-gold-400">Legal Practice.</span>
               </h1>
 
-              <p className="text-base lg:text-lg text-cream-300/70 leading-relaxed mb-8 fade-in-up fade-in-delay-1">
-                Comprehensive legal services across Zimbabwe — delivered with integrity,
-                professionalism, and measurable results.
+              <p className="font-serif font-bold text-white leading-[1.15] mb-8 fade-in-up fade-in-delay-1">
+                <span className="text-2xl lg:text-3xl block">Bold.</span>
+                <span className="text-2xl lg:text-3xl block">Practical.</span>
+                <span className="text-2xl lg:text-3xl block text-gold-400">Effective Solutions.</span>
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 fade-in-up fade-in-delay-2">
@@ -190,7 +191,7 @@ const Homepage = () => {
                   to="/contact"
                   className="btn-gold inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-semibold"
                 >
-                  Free Consultation
+                  Schedule Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
                 <Link
@@ -201,14 +202,7 @@ const Homepage = () => {
                 </Link>
               </div>
 
-              <div className="flex flex-wrap items-center gap-5 mt-8 fade-in-up fade-in-delay-3">
-                {['Bar Certified', 'Confidential', 'Emergency Ready'].map((badge) => (
-                  <div key={badge} className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold-500" />
-                    <span className="text-cream-300/50 text-xs">{badge}</span>
-                  </div>
-                ))}
-              </div>
+
             </div>
 
             {/* ── Right: 3D Scales ── */}
@@ -227,7 +221,7 @@ const Homepage = () => {
       <section ref={statsRef} className="bg-navy-600 border-y border-gold-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-gold-500/10">
-            <StatItem value={500} suffix="+" label="Cases Handled" trigger={statsVisible} />
+            <StatItem value={1000} suffix="+" label="Cases Handled" trigger={statsVisible} />
             <StatItem value={7} suffix="" label="Expert Attorneys" trigger={statsVisible} />
             <StatItem value={15} suffix="+" label="Years Experience" trigger={statsVisible} />
             <StatItem value={9} suffix="" label="Practice Areas" trigger={statsVisible} />
@@ -325,7 +319,7 @@ const Homepage = () => {
               </h2>
               <p className="text-charcoal-600/70 leading-relaxed mb-5">
                 Founded on the principles of integrity, excellence, and client-centred service,
-                Chikwangwani Tapi Attorneys has grown to become a respected boutique law firm
+                Chikwangwani Tapi Attorneys has grown to become a respected law firm
                 serving clients across Zimbabwe's diverse legal landscape.
               </p>
               <p className="text-charcoal-600/70 leading-relaxed mb-8">
@@ -478,7 +472,7 @@ const Homepage = () => {
               Ready to Protect Your Rights?
             </h2>
             <p className="text-cream-300/60 text-lg mb-10">
-              Schedule a free consultation with our experienced legal team and let us guide
+              Schedule a consultation with our experienced legal team and let us guide
               you toward the best possible outcome for your matter.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -486,7 +480,7 @@ const Homepage = () => {
                 to="/contact"
                 className="btn-gold inline-flex items-center px-8 py-4 rounded-xl font-semibold"
               >
-                Book a Free Consultation
+                Schedule a Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a

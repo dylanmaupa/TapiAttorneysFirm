@@ -99,8 +99,8 @@ const BlogPost = () => {
     },
     '3': {
       title: 'Constitutional Rights and Public Interest Litigation',
-      author: 'NT. Mazungunye',
-      authorId: 'mazungunye',
+      author: 'M. James',
+      authorId: 'james',
       date: 'March 5, 2025',
       category: 'Constitutional Law',
       readTime: '6 min read',
@@ -168,8 +168,8 @@ const BlogPost = () => {
     },
     '5': {
       title: 'Criminal Defense: Know Your Rights During Arrest',
-      author: 'NT. Mazungunye',
-      authorId: 'mazungunye',
+      author: 'M. James',
+      authorId: 'james',
       date: 'February 20, 2025',
       category: 'Criminal Law',
       readTime: '4 min read',
@@ -386,14 +386,14 @@ const BlogPost = () => {
                   to="/contact"
                   className="btn-gold w-full flex items-center justify-center px-4 py-3 rounded-xl font-semibold text-sm"
                 >
-                  Free Consultation
+                  consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
                 <a
-                  href="tel:+2634123456"
+                  href="tel:+2638677211814"
                   className="block mt-3 text-cream-300/40 hover:text-gold-400 text-xs transition-colors"
                 >
-                  Or call: +263 4 123 4567
+                  Or call: +263 8677211814
                 </a>
               </div>
 
@@ -417,3 +417,5 @@ const BlogPost = () => {
 };
 
 export default BlogPost;
+
+
